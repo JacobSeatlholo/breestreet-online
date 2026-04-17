@@ -433,7 +433,7 @@ section{padding:72px 48px;}
 .photo-cell{height:180px;display:flex;align-items:center;justify-content:center;font-size:40px;border-radius:6px;background-size:cover;background-position:center;}
 
 /* ── PACKAGES ── */
-.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;align-items:stretch;}
+.pkg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;align-items:stretch;}
 .pkg-card{background:var(--bg);border:1px solid rgba(255,255,255,.06);padding:32px 24px;position:relative;border-radius:var(--r);transition:border-color .25s,transform .2s,box-shadow .25s;display:flex;flex-direction:column;}
 .pkg-card:hover{border-color:rgba(245,197,24,.25);transform:translateY(-4px);box-shadow:0 10px 32px rgba(0,0,0,.35);}
 .pkg-card.featured{border-color:rgba(245,197,24,.3);background:rgba(245,197,24,.02);animation:glowPulse 3s ease-in-out infinite;}
@@ -653,6 +653,9 @@ body{top:0!important;}
   .about-grid,.ai-grid{grid-template-columns:1fr;gap:36px;}
   .biz-body{grid-template-columns:1fr;gap:24px;padding:28px 20px;}
   .biz-hero-inner{padding:28px 20px;}
+  .pkg-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
   .pkg-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr 1fr;}
   .pass-block{grid-template-columns:1fr;gap:28px;}
@@ -1396,60 +1399,92 @@ body{top:0!important;}
 <!-- ══════════════════ PACKAGES ══════════════════ -->
 <div id="pg-packages" class="pg">
   <section style="padding-top:100px;background:var(--bg2);">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-bottom:52px;align-items:start;">
-      <div><div class="sec-tag">For Businesses</div><div class="sec-title">Become a Featured Brand on Bree Street</div></div>
-      <p style="font-size:14px;color:var(--muted);line-height:1.7;padding-top:12px;">Limited spots. Real scarcity. Every tier is handpicked — not just paid for. Payments processed securely via <strong style="color:var(--a);">Yoco</strong>.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-bottom:16px;align-items:start;">
+      <div><div class="sec-tag">For Businesses</div><div class="sec-title">List Your Business on Bree Street</div></div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7;padding-top:12px;">Three tiers, zero fluff. Bree Street operators understand marketing ROI — these packages are priced to match. Payments via <strong style="color:var(--a);">Yoco</strong>.</p>
     </div>
+
+    <!-- Transactional add-ons strip -->
+    <div style="display:flex;gap:8px;margin-bottom:36px;flex-wrap:wrap;">
+      <div style="background:rgba(245,197,24,.06);border:1px solid rgba(245,197,24,.15);padding:10px 16px;border-radius:6px;font-size:11px;color:var(--muted);"><strong style="color:var(--a);">+ R15</strong> per AI concierge booking referral</div>
+      <div style="background:rgba(245,197,24,.06);border:1px solid rgba(245,197,24,.15);padding:10px 16px;border-radius:6px;font-size:11px;color:var(--muted);"><strong style="color:var(--a);">+ R350</strong> per event listing on the Bree Street feed</div>
+      <div style="background:rgba(245,197,24,.06);border:1px solid rgba(245,197,24,.15);padding:10px 16px;border-radius:6px;font-size:11px;color:var(--muted);"><strong style="color:var(--a);">R199/mo</strong> Street Pass — consumer membership</div>
+    </div>
+
     <div class="pkg-grid">
+
+      <!-- STARTER -->
       <div class="pkg-card">
-        <div class="pkg-tier" style="color:#9e7c4a;">Essential</div>
-        <div class="pkg-price">R750</div><div class="pkg-per">/month</div>
-        <div class="pkg-billed">R2,100 for 3 months</div>
-        <div class="pkg-slots"><span>Spots remaining</span><span style="color:var(--a);">18/35</span></div>
-        <div class="pkg-bar-wrap"><div class="pkg-bar" style="width:48%;"></div></div>
+        <div class="pkg-tier" style="color:#9e7c4a;">Starter</div>
+        <div class="pkg-price">R1,200</div><div class="pkg-per">/month</div>
+        <div class="pkg-billed">Billed monthly via Yoco</div>
+        <div class="pkg-slots"><span>Spots remaining</span><span style="color:var(--a);">12/20</span></div>
+        <div class="pkg-bar-wrap"><div class="pkg-bar" style="width:40%;"></div></div>
         <ul class="pkg-feats">
-          <li>Premium business listing</li>
-          <li>Category placement</li>
-          <li>Contact details + WhatsApp</li>
-          <li>Clean editorial card</li>
-          <li>Local discovery visibility</li>
+          <li>Verified directory listing</li>
+          <li>Category + address placement</li>
+          <li>WhatsApp &amp; contact details</li>
+          <li>Unlocked brand card</li>
+          <li>Local search visibility</li>
         </ul>
-        <a class="pkg-btn pkg-btn-ghost" href="https://app.businesshustle.co.za/product/essential-bree-street-brand-feature-package/" target="_blank">Buy Now — R750</a>
+        <a class="pkg-btn pkg-btn-ghost" href="https://app.businesshustle.co.za/product/bree-street-starter-feature-package/" target="_blank">Get Started — R1,200</a>
       </div>
+
+      <!-- GROWTH -->
       <div class="pkg-card featured">
-        <div class="pkg-pop">Most Popular</div>
-        <div class="pkg-tier" style="color:#c9a84c;">Starter</div>
-        <div class="pkg-price">R960</div><div class="pkg-per">/month</div>
+        <div class="pkg-pop">Best Value</div>
+        <div class="pkg-tier" style="color:#c9a84c;">Growth</div>
+        <div class="pkg-price">R2,500</div><div class="pkg-per">/month</div>
         <div class="pkg-billed">Billed monthly via Yoco</div>
-        <div class="pkg-slots"><span>Spots remaining</span><span style="color:var(--a);">5/10</span></div>
-        <div class="pkg-bar-wrap"><div class="pkg-bar" style="width:50%;"></div></div>
+        <div class="pkg-slots"><span>Spots remaining</span><span style="color:var(--a);">6/10</span></div>
+        <div class="pkg-bar-wrap"><div class="pkg-bar" style="width:40%;"></div></div>
         <ul class="pkg-feats">
-          <li>Everything in Essential</li>
-          <li>1 paid promo placement</li>
-          <li>1 short-form reel feature</li>
-          <li>Priority category placement</li>
-          <li>BH project management app</li>
-          <li>Hustle Basics ebook</li>
-        </ul>
-        <a class="pkg-btn pkg-btn-gold" href="https://app.businesshustle.co.za/product/bree-street-starter-feature-package/" target="_blank">Buy Now — R960</a>
-      </div>
-      <div class="pkg-card">
-        <div class="pkg-tier" style="color:var(--a);">Growth</div>
-        <div class="pkg-price">R1,360</div><div class="pkg-per">/month</div>
-        <div class="pkg-billed">Billed monthly via Yoco</div>
-        <div class="pkg-slots"><span>Spots remaining</span><span style="color:var(--a);">3/6</span></div>
-        <div class="pkg-bar-wrap"><div class="pkg-bar" style="width:50%;"></div></div>
-        <ul class="pkg-feats">
+          <li>Everything in Starter</li>
           <li>Full editorial profile page</li>
-          <li>Spotlight in category</li>
-          <li>Streetwide marketing push</li>
-          <li>Founder marketing support</li>
-          <li>Priority tools &amp; features</li>
+          <li>Services grid + photo section</li>
           <li>AI concierge priority placement</li>
           <li>Street Pass benefit inclusion</li>
+          <li>1 monthly promo push</li>
+          <li>Booking referral tracking</li>
         </ul>
-        <a class="pkg-btn pkg-btn-ghost" href="https://app.businesshustle.co.za/product/bree-street-growth-package/" target="_blank">Buy Now — R1,360</a>
+        <a class="pkg-btn pkg-btn-gold" href="https://app.businesshustle.co.za/product/bree-street-growth-package/" target="_blank">Get Started — R2,500</a>
       </div>
+
+      <!-- FEATURED -->
+      <div class="pkg-card" style="border-color:rgba(245,197,24,.2);">
+        <div class="pkg-tier" style="color:var(--a);">Featured</div>
+        <div class="pkg-price">R4,500</div><div class="pkg-per">/month</div>
+        <div class="pkg-billed">Billed monthly via Yoco</div>
+        <div class="pkg-slots"><span>Spots remaining</span><span style="color:var(--a);">2/4</span></div>
+        <div class="pkg-bar-wrap"><div class="pkg-bar" style="width:50%;"></div></div>
+        <ul class="pkg-feats">
+          <li>Everything in Growth</li>
+          <li>Homepage hero slot</li>
+          <li>First position in directory</li>
+          <li>Monthly content feature</li>
+          <li>Dedicated founder support</li>
+          <li>Event listings included (&#xd7;2/mo)</li>
+          <li>Street Pass rev-share</li>
+        </ul>
+        <a class="pkg-btn pkg-btn-ghost" href="https://wa.me/27744815163?text=Hi%2C%20I%27d%20like%20the%20Featured%20package%20on%20BreeStreet.online" target="_blank">&#x1F4AC; Apply — R4,500</a>
+      </div>
+
+      <!-- STREET PASS -->
+      <div class="pkg-card" style="background:rgba(37,211,102,.03);border-color:rgba(37,211,102,.15);">
+        <div class="pkg-tier" style="color:#25D366;">Street Pass</div>
+        <div class="pkg-price" style="color:#25D366;">R199</div><div class="pkg-per">/month</div>
+        <div class="pkg-billed">Consumer membership</div>
+        <div style="height:2px;background:rgba(37,211,102,.15);margin-bottom:18px;border-radius:1px;"></div>
+        <p style="font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:16px;">For Bree Street regulars. Discounts at every Growth &amp; Featured partner, AI concierge priority, WhatsApp flash deals.</p>
+        <ul class="pkg-feats">
+          <li>Exclusive deals at 10+ venues</li>
+          <li>Priority AI concierge access</li>
+          <li>WhatsApp flash deal alerts</li>
+          <li>Members-only monthly events</li>
+        </ul>
+        <a class="pkg-btn" style="background:#25D366;color:#fff;" href="https://wa.me/27744815163?text=Hi%2C%20I%27d%20like%20to%20get%20a%20Bree%20Street%20Street%20Pass%20membership" target="_blank">&#x1F4AC; Get Street Pass</a>
+      </div>
+
     </div>
     <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:28px;">Payments via <strong style="color:var(--a);">Yoco</strong> &middot; Business Hustle platform &middot; <a onclick="go('listed')" style="color:var(--a);cursor:pointer;">Questions? Contact us</a></p>
     <div style="margin-top:32px;background:rgba(37,211,102,.06);border:1px solid rgba(37,211,102,.2);border-radius:var(--r);padding:24px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
