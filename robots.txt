@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+User-agent: Googlebot
+Crawl-delay: 0
+
+Sitemap: https://breestreet.online/sitemap.xml
+Host: breestreet.online
